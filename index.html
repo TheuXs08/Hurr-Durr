@@ -52,7 +52,7 @@
   <div class="hurr">HURR DURR</div>
   <img id="hurrGif" src="https://i.makeagif.com/media/2-27-2017/J8mFBe.gif" alt="Hurr Durr GIF">
 
-  <!-- Música de fundo -->
+  <!-- Music -->
   <audio id="hurrAudio" loop>
     <source src="Hurr-durr-derp-derp-hurr-derp-derp-song.mp3" type="audio/mpeg">
     Seu navegador não suporta o elemento de áudio.
@@ -62,7 +62,6 @@
     const gif = document.getElementById("hurrGif");
     const audio = document.getElementById("hurrAudio");
 
-    // Título dinâmico
     const titles = [
       "HURR DURR",
       "GET HURR DURR",
@@ -81,14 +80,11 @@
       index = (index + 1) % titles.length;
     }, 1000);
 
-    // Clique no GIF com alerta HURR/DURR
     gif.addEventListener("click", () => {
       const choice = confirm("HURR DURR?");
       if (choice) {
-        // DURR selecionado → tocar música
         audio.play();
       } else {
-        // HURR selecionado → cancelar / pausar música
         audio.pause();
         audio.currentTime = 0;
       }
@@ -96,3 +92,4 @@
   </script>
 </body>
 </html>
+
